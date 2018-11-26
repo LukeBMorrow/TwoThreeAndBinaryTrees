@@ -510,6 +510,15 @@ class TwoThreeTree {
             return curr.key[0];
         } // end getMaxDataValue
 
+        /* chooses which child matches or directs to the key and returns it. */
+        public TwoThreeNode moveToChild(int searchKey) {
+            int index = numIndexValues - 1;
+            while (index >= 0 && searchKey < key[index]) {
+                index++;
+            }
+            return child[index + 1];
+        }
+
     } // end class TwoThreeNode
 
     /**************************************************************
@@ -539,8 +548,13 @@ class TwoThreeTree {
      *
      **************************************************************/
     private TwoThreeNode searchToLeaf(int searchKey) {
-
-        /*********** YOUR CODE GOES HERE ******************/
+        TwoThreeNode curr = root;
+        if (root != null) {
+            while (curr.child != null) {
+                curr.moveToChild(searchKey);
+            }
+        }
+        return curr;
 
     } // end searchToLeaf
 
@@ -554,9 +568,13 @@ class TwoThreeTree {
      **************************************************************/
     public boolean search(int searchKey) {
 
-        /*********** YOUR CODE GOES HERE ******************/
+        boolean found;
+        TwoThreeNode curr = searchToLeaf(searchKey);
+        found = searchKey == curr.key[0];
+        return found;
 
     } // end search
+
 
     /************************************************************
      * insert
@@ -570,8 +588,16 @@ class TwoThreeTree {
      *
      **************************************************************/
     public void insert(int newKey) {
+        TwoThreeNode curr = searchToLeaf(newKey);
+        if(curr!=null && curr.key[0]!=newKey){
+            if(curr.parent.numIndexValues==2){//needs to split
 
-        /*********** YOUR CODE GOES HERE ******************/
+            }else if(curr.parent.numIndexValues==1){//doesnt need to split
+
+            }
+        }else{//root is empty
+            root = new TwoThreeNode(newKey,null);
+        }
 
     } // end insert
 
