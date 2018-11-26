@@ -589,18 +589,50 @@ class TwoThreeTree {
      **************************************************************/
     public void insert(int newKey) {
         TwoThreeNode curr = searchToLeaf(newKey);
-        if(curr!=null && curr.key[0]!=newKey){
-            if(curr.parent.numIndexValues==2){//needs to split
+        if (curr != null){
+            if(curr.key[0] != newKey){
+                TwoThreeNode parent = curr.parent;
+                if (parent.numIndexValues == 2) {//needs to split
 
-            }else if(curr.parent.numIndexValues==1){//doesnt need to split
+                } else if (parent.numIndexValues == 1) {//doesnt need to split
+                    if (curr.key[0] > parent.key[0]) {//key is greater than the previous index
+                        if (newKey > curr.key[0]) {//key is the greatest item in this parent
+                            parent.key[1] = newKey;
+                            parent.child[parent.numIndexValues] = new TwoThreeNode(newKey, parent);
+                            parent.numIndexValues++;
+                        } else {//key is the second greatest item in this parent
+                            swap(parent.key,0,1);
+                            parent.key[0] = newKey;
+                            parent.child[parent.numIndexValues-1] = new TwoThreeNode(newKey, parent);
+                            parent.numIndexValues++;
+                        }
+                    }else{
+                        if (newKey < curr.key[0]) {//key is the greatest item in this parent
+                            swap(parent.key,0,1);
+                            parent.key[0] = parent.child[0].key[0];
+                            for(int i=parent.numIndexValues;i>=0;i--)
+                                parent.child[i] = parent.child[i+1];
+                            parent.child[0] = new TwoThreeNode(newKey, parent);
+                            parent.numIndexValues++;
+                        } else {//key is the second greatest item in this parent
+                            parent.key[0] = newKey;
+                            parent.child[parent.numIndexValues-1] = new TwoThreeNode(newKey, parent);
+                            parent.numIndexValues++;
+                        }
+                    }
 
+                }
             }
-        }else{//root is empty
-            root = new TwoThreeNode(newKey,null);
+        } else {//root is empty
+            root = new TwoThreeNode(newKey, null);
         }
-
     } // end insert
 
+    public void swap(int[] a, int posA, int posB) {
+        int temp = a[posA];
+        a[posA] = a[posB];
+        a[posB] = temp;
+    }
 
     /************************************************************
      *  printTree
