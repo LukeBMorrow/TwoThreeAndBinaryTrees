@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-import javax.swing.*;
 
 
 /***********************************************************************************
@@ -528,7 +527,7 @@ class TwoThreeTree {
      **************************************************************/
 
     private TwoThreeNode root;
-
+    public int numToPrint = 20;// the number of prints that are allowed in a 2-3 tree
 
     /**************************************************************
      * Constructor
@@ -589,10 +588,11 @@ class TwoThreeTree {
      **************************************************************/
     public void insert(int newKey) {
         TwoThreeNode curr = searchToLeaf(newKey);
-        if (curr != null){
-            if(curr.key[0] != newKey){
+        if (curr != null) {
+            if (curr.key[0] != newKey) {
                 TwoThreeNode parent = curr.parent;
                 if (parent.numIndexValues == 2) {//needs to split
+
 
                 } else if (parent.numIndexValues == 1) {//doesnt need to split
                     if (curr.key[0] > parent.key[0]) {//key is greater than the previous index
@@ -601,22 +601,22 @@ class TwoThreeTree {
                             parent.child[parent.numIndexValues] = new TwoThreeNode(newKey, parent);
                             parent.numIndexValues++;
                         } else {//key is the second greatest item in this parent
-                            swap(parent.key,0,1);
+                            swap(parent.key, 0, 1);
                             parent.key[0] = newKey;
-                            parent.child[parent.numIndexValues-1] = new TwoThreeNode(newKey, parent);
+                            parent.child[parent.numIndexValues - 1] = new TwoThreeNode(newKey, parent);
                             parent.numIndexValues++;
                         }
-                    }else{
+                    } else {
                         if (newKey < curr.key[0]) {//key is the greatest item in this parent
-                            swap(parent.key,0,1);
+                            swap(parent.key, 0, 1);
                             parent.key[0] = parent.child[0].key[0];
-                            for(int i=parent.numIndexValues;i>=0;i--)
-                                parent.child[i] = parent.child[i+1];
+                            for (int i = parent.numIndexValues; i >= 0; i--)
+                                parent.child[i] = parent.child[i + 1];
                             parent.child[0] = new TwoThreeNode(newKey, parent);
                             parent.numIndexValues++;
                         } else {//key is the second greatest item in this parent
                             parent.key[0] = newKey;
-                            parent.child[parent.numIndexValues-1] = new TwoThreeNode(newKey, parent);
+                            parent.child[parent.numIndexValues - 1] = new TwoThreeNode(newKey, parent);
                             parent.numIndexValues++;
                         }
                     }
@@ -645,10 +645,29 @@ class TwoThreeTree {
      *
      **************************************************************/
     public void printTree() {
-
-        /*********** YOUR CODE GOES HERE ******************/
-
+        if (root != null) {
+            printTree(root);
+        } else {
+            System.out.println("Tree is empty");
+        }
+        if(numToPrint<=0){
+            System.out.print("...\n");
+        }
+        numToPrint = 20;// reset the print counter
     } // end printTree
+
+    public void printTree(TwoThreeNode x) {
+        if (numToPrint > 0) {
+            if (x.isInteriorNode()) {//x is an interior node
+                for (TwoThreeNode i : x.child) {
+                    printTree(i);
+                }
+            } else {//x is a leaf
+                System.out.println(x.key[0]+" ");
+                numToPrint--;
+            }
+        }
+    }
 
     /************************************************************
      *  treeOK
@@ -756,7 +775,7 @@ class BST {
      **************************************************************/
 
     private BSTNode root;
-
+    private int numToPrint = 20;
     /************************************************************
      *  Constructor
      *
@@ -765,7 +784,7 @@ class BST {
      **************************************************************/
     public BST() {
 
-        /*********** YOUR CODE GOES HERE ******************/
+        root = null;
 
     }
 
@@ -778,8 +797,26 @@ class BST {
      **************************************************************/
     public void insert(int newKey) {
 
-        /*********** YOUR CODE GOES HERE ******************/
+        BSTNode curr = root;
+        BSTNode prev = null;
 
+        while (curr != null && curr.item != newKey) {
+            prev = curr;
+            if (curr.item > newKey) {
+                curr = curr.left;
+            } else {
+                curr = curr.right;
+            }
+        }//either curr==null or newKey is a duplicate
+        if (prev != null) {//normal insertion
+            if (prev.item > newKey) {
+                prev.left = new BSTNode(newKey);
+            } else {
+                prev.right = new BSTNode(newKey);
+            }
+        } else if (curr == null) {//tree is empty
+            root = new BSTNode(newKey);
+        }//do nothing if newKey is a duplicate
     } // end insert
 
     /************************************************************
@@ -791,9 +828,19 @@ class BST {
      *
      **************************************************************/
     public boolean search(int searchKey) {
-
-        /*********** YOUR CODE GOES HERE ******************/
-
+        BSTNode curr = root;
+        boolean found = false;
+        while (curr != null && curr.item != searchKey) {
+            if (curr.item > searchKey) {
+                curr = curr.left;
+            } else {
+                curr = curr.right;
+            }
+        }//curr is either null xor the desired item
+        if(curr != null){//not null, there for the desired item
+            found = true;
+        }
+        return found;//is null, therefore not the desired item
     } // end search
 
     /************************************************************
@@ -805,10 +852,25 @@ class BST {
      *
      **************************************************************/
     public void printTree() {
-
-        /*********** YOUR CODE GOES HERE ******************/
-
+        if (root != null) {
+            printTree(root);
+        } else {
+            System.out.println("Tree is empty");
+        }
+        if(numToPrint<=0){
+            System.out.println("...\n");
+        }
+        numToPrint = 20;// reset the print counter
     } // end printTree
+
+    public void printTree(BSTNode x) {
+        if (numToPrint>0){
+            printTree(x.left);
+            System.out.println(x.item+" ");
+            numToPrint--;
+            printTree(x.right);
+        }
+    }
 
 } // end class BST
 
