@@ -1,5 +1,7 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
 
 
 /***********************************************************************************
@@ -513,7 +515,7 @@ class TwoThreeTree {
         public TwoThreeNode moveToChild(int searchKey) {
             int index = numIndexValues - 1;
             while (index >= 0 && searchKey < key[index]) {
-                index++;
+                index--;
             }
             return child[index + 1];
         }
@@ -588,50 +590,42 @@ class TwoThreeTree {
      **************************************************************/
     public void insert(int newKey) {
         TwoThreeNode curr = searchToLeaf(newKey);
-        if (curr != null) {
-            if (curr.key[0] != newKey) {
-                TwoThreeNode parent = curr.parent;
-                if (parent.numIndexValues == 2) {//needs to split
-
-
-                } else if (parent.numIndexValues == 1) {//doesnt need to split
-                    if (curr.key[0] > parent.key[0]) {//key is greater than the previous index
-                        if (newKey > curr.key[0]) {//key is the greatest item in this parent
-                            parent.key[1] = newKey;
-                            parent.child[parent.numIndexValues] = new TwoThreeNode(newKey, parent);
-                            parent.numIndexValues++;
-                        } else {//key is the second greatest item in this parent
-                            swap(parent.key, 0, 1);
-                            parent.key[0] = newKey;
-                            parent.child[parent.numIndexValues - 1] = new TwoThreeNode(newKey, parent);
-                            parent.numIndexValues++;
-                        }
-                    } else {
-                        if (newKey < curr.key[0]) {//key is the greatest item in this parent
-                            swap(parent.key, 0, 1);
-                            parent.key[0] = parent.child[0].key[0];
-                            for (int i = parent.numIndexValues; i >= 0; i--)
-                                parent.child[i] = parent.child[i + 1];
-                            parent.child[0] = new TwoThreeNode(newKey, parent);
-                            parent.numIndexValues++;
-                        } else {//key is the second greatest item in this parent
-                            parent.key[0] = newKey;
-                            parent.child[parent.numIndexValues - 1] = new TwoThreeNode(newKey, parent);
-                            parent.numIndexValues++;
-                        }
-                    }
-
-                }
-            }
+        if (curr != null) {//parent is found
+            addChild(curr, new TwoThreeNode(newKey, curr.parent));
+            pushToParent(curr.parent);
         } else {//root is empty
             root = new TwoThreeNode(newKey, null);
         }
     } // end insert
 
+    public void swap(TwoThreeNode[] a, int posA, int posB) {
+        TwoThreeNode temp = a[posA];
+        a[posA] = a[posB];
+        a[posB] = temp;
+    }
     public void swap(int[] a, int posA, int posB) {
         int temp = a[posA];
         a[posA] = a[posB];
         a[posB] = temp;
+    }
+
+    public void addChild(TwoThreeNode matchingPosition, TwoThreeNode newItem) {
+        int index = matchingPosition.parent.numIndexValues - 1;
+        TwoThreeNode parent = matchingPosition.parent;
+        while (index >= 0 && newItem.key[0] < parent.key[index]) {
+            swap(parent.child,index,index+1);
+            index--;
+        }
+        matchingPosition.parent.child[index + 1]=newItem;
+        matchingPosition.parent.numIndexValues++;
+    }
+
+    public void pushToParent(TwoThreeNode parent) {
+        if(parent.numIndexValues<3) {//overfull parent
+            TwoThreeNode grandParent = parent.parent;
+            swap(grandParent.key,grandParent.numIndexValues-1,grandParent.numIndexValues);
+            grandParent.key[grandParent.numIndexValues-1]=parent.key[parent.numIndexValues-1];
+        }
     }
 
     /************************************************************
@@ -650,7 +644,7 @@ class TwoThreeTree {
         } else {
             System.out.println("Tree is empty");
         }
-        if(numToPrint<=0){
+        if (numToPrint <= 0) {
             System.out.print("...\n");
         }
         numToPrint = 20;// reset the print counter
@@ -663,7 +657,7 @@ class TwoThreeTree {
                     printTree(i);
                 }
             } else {//x is a leaf
-                System.out.println(x.key[0]+" ");
+                System.out.println(x.key[0] + " ");
                 numToPrint--;
             }
         }
@@ -776,6 +770,7 @@ class BST {
 
     private BSTNode root;
     private int numToPrint = 20;
+
     /************************************************************
      *  Constructor
      *
@@ -837,7 +832,7 @@ class BST {
                 curr = curr.right;
             }
         }//curr is either null xor the desired item
-        if(curr != null){//not null, there for the desired item
+        if (curr != null) {//not null, there for the desired item
             found = true;
         }
         return found;//is null, therefore not the desired item
@@ -857,16 +852,16 @@ class BST {
         } else {
             System.out.println("Tree is empty");
         }
-        if(numToPrint<=0){
+        if (numToPrint <= 0) {
             System.out.println("...\n");
         }
         numToPrint = 20;// reset the print counter
     } // end printTree
 
     public void printTree(BSTNode x) {
-        if (numToPrint>0){
+        if (numToPrint > 0) {
             printTree(x.left);
-            System.out.println(x.item+" ");
+            System.out.println(x.item + " ");
             numToPrint--;
             printTree(x.right);
         }
