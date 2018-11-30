@@ -583,84 +583,79 @@ class TwoThreeTree {
      *
      **************************************************************/
     public void insert(int newKey) {
-        TwoThreeNode curr = searchToLeaf(newKey);
-        if (root != null) {
-            if (curr == root) {
-                TwoThreeNode newParent = new TwoThreeNode(newKey,null);
-                root.parent = newParent;
-            } else {
-                if (curr.parent.numIndexValues <= 2) {//if no split is required
-                    addChild(curr.parent, newKey);
-                } else {//split is needed
-                    parentInsert(curr.parent, new TwoThreeNode(newKey, curr.parent));
+        if (root == null) {
+            root = new TwoThreeNode(newKey, null);
+        } else {
+            TwoThreeNode destination = searchToLeaf(newKey);//closest item to ours
+            if (destination.key[0] != newKey) {//preform insert
+                TwoThreeNode newNode = new TwoThreeNode(newKey, destination.parent);//now we have a node pointing to the parent
+                if (destination == root) {
+                    if (newNode.key[0] > destination.key[0]) {
+                        root = new TwoThreeNode(newNode.key[0], destination.parent, destination, newNode);
+                        newNode.parent = root;
+                        destination.parent = root;
+                    } else {
+                        root = new TwoThreeNode(destination.key[0], destination.parent, newNode, destination);
+                        newNode.parent = root;
+                        destination.parent = root;
+                    }
+                } else {
+                    if (destination.parent.numIndexValues < 2) {
+                        int index = destination.parent.numIndexValues - 1;
+                        while (index >= 0 && newKey < destination.parent.key[index]) {
+                            swap(destination.parent.child, index, index + 1);
+                            index--;
+                        }
+                        destination.parent.child[index + 1] = newNode;
+                        destination.parent.numIndexValues++;//move up numIndexValues to 2
+                        destination.parent.key[0] = destination.parent.child[1].key[0];
+                        destination.parent.key[1] = destination.parent.child[2].key[0];
+                    } else {
+                        //split
+                    }
+
                 }
             }
-        } else {
-            root = new TwoThreeNode(newKey, null);
+
         }
+
     }
 
-    private void parentInsert(TwoThreeNode changingParent, TwoThreeNode newChild) {
-        if (changingParent.numIndexValues <= 2) {//if no split is required
-            addChild(changingParent, newChild);
-        } else {//split is needed
-            TwoThreeNode[] overloadedChildren = new TwoThreeNode[changingParent.child.length + 1];//to fit our extra child
-            final int SECOND_LARGEST = overloadedChildren.length - 2;
-            final int LARGEST = overloadedChildren.length - 1;
-            for (int i = 0; i < changingParent.child.length; i++) {
-                overloadedChildren[i] = changingParent.child[i];
+    private void split(TwoThreeNode splittingParent, TwoThreeNode newAddition) {
+        //NEEDS TO PLAY WITH ROOT
+
+            TwoThreeNode[] overfullChildren = new TwoThreeNode[splittingParent.child.length + 1];//add 1 to allow for overfull children
+
+            for (int i = 0; i < splittingParent.child.length; i++) {
+                overfullChildren[i] = splittingParent.child[i];
             }
-            addChild(overloadedChildren, newChild);
-            TwoThreeNode parentSplit = new TwoThreeNode(overloadedChildren[LARGEST].key[0], changingParent.parent,
-                    overloadedChildren[SECOND_LARGEST],
-                    overloadedChildren[LARGEST]);
+            int index = splittingParent.numIndexValues - 1;
+            while (index >= 0 && newAddition.key[0] < splittingParent.child[index].key[0]) {
+                swap(splittingParent.child, index, index + 1);
+                index--;
+            }
+            overfullChildren[index + 1] = newAddition;
+            splittingParent.child[0] = overfullChildren[0];
+            splittingParent.child[1] = overfullChildren[1];
+            splittingParent.key[0] = overfullChildren[1].key[0];
+            TwoThreeNode newParent = new TwoThreeNode(overfullChildren[3].key[0], splittingParent.parent, overfullChildren[2], overfullChildren[3]);
+            addNewNode(splittingParent.parent, newParent);
 
-            overloadedChildren[SECOND_LARGEST].parent = parentSplit;
-            overloadedChildren[LARGEST].parent = parentSplit;
-
-            parentInsert(changingParent.parent, parentSplit);
-        }
     }
 
-    /*Triple overloaded method addChild*/
-    private void addChild(TwoThreeNode[] children, TwoThreeNode newChild) {
-        int index = children.length - 1;
-        while (index >= 0 && newChild.key[0] < children[index].key[0]) {
-            swap(children, index, index + 1);
-            index--;
-        }
-        children[index + 1] = newChild;
-    }
-
-    private void addChild(TwoThreeNode parent, int newKey) {
-        int index = parent.numIndexValues - 1;
-        while (index >= 0 && newKey < parent.key[index]) {
-            swap(parent.child, index, index + 1);
-            index--;
-        }
-        parent.child[index + 1] = new TwoThreeNode(newKey, parent);
-        parent.numIndexValues++;
-        sortKey(parent);
-    }
-
-    private void addChild(TwoThreeNode parent, TwoThreeNode newChild) {
-        int index = parent.numIndexValues - 1;
-        while (index >= 0 && newChild.key[0] < parent.key[index]) {
-            swap(parent.child, index, index + 1);
-            index--;
-        }
-        newChild.parent = parent;
-        parent.child[index + 1] = newChild;
-        parent.numIndexValues++;
-        sortKey(parent);
-    }
-
-    private void sortKey(TwoThreeNode interiorNode) {
-        if (interiorNode.numIndexValues == 1) {
-            interiorNode.key[0] = interiorNode.child[interiorNode.numIndexValues].key[0];
-        } else {
-            interiorNode.key[1] = interiorNode.child[interiorNode.numIndexValues].key[0];
-            interiorNode.key[0] = interiorNode.child[interiorNode.numIndexValues - 1].key[0];
+    private void addNewNode(TwoThreeNode newParent, TwoThreeNode newAddition) {
+        if(newParent.numIndexValues<2) {
+            int index = newParent.numIndexValues - 1;
+            while (index >= 0 && newAddition.key[0] < newParent.key[index]) {
+                swap(newParent.child, index, index + 1);
+                index--;
+            }
+            newParent.parent.child[index + 1] = newAddition;
+            newParent.parent.numIndexValues++;//move up numIndexValues to 2
+            newParent.parent.key[0] = newParent.parent.child[1].key[0];
+            newParent.parent.key[1] = newParent.parent.child[2].key[0];
+        }else{
+            split(newParent,newAddition);
         }
     }
 
