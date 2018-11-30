@@ -568,12 +568,7 @@ class TwoThreeTree {
      *
      **************************************************************/
     public boolean search(int searchKey) {
-
-        boolean found;
-        TwoThreeNode curr = searchToLeaf(searchKey);
-        found = searchKey == curr.key[0];
-        return found;
-
+        return searchToLeaf(searchKey).key[0] == searchKey;
     } // end search
 
 
@@ -590,42 +585,67 @@ class TwoThreeTree {
      **************************************************************/
     public void insert(int newKey) {
         TwoThreeNode curr = searchToLeaf(newKey);
-        if (curr != null) {//parent is found
-            addChild(curr, new TwoThreeNode(newKey, curr.parent));
-            pushToParent(curr.parent);
-        } else {//root is empty
-            root = new TwoThreeNode(newKey, null);
+        if (curr.parent.numIndexValues <= 2) {//if no split is required
+            addChild(curr.parent, newKey);
+        } else {//split is needed
+            parentInsert(curr.parent, new TwoThreeNode(newKey, curr.parent));
         }
-    } // end insert
-
-    public void swap(TwoThreeNode[] a, int posA, int posB) {
-        TwoThreeNode temp = a[posA];
-        a[posA] = a[posB];
-        a[posB] = temp;
-    }
-    public void swap(int[] a, int posA, int posB) {
-        int temp = a[posA];
-        a[posA] = a[posB];
-        a[posB] = temp;
     }
 
-    public void addChild(TwoThreeNode matchingPosition, TwoThreeNode newItem) {
-        int index = matchingPosition.parent.numIndexValues - 1;
-        TwoThreeNode parent = matchingPosition.parent;
-        while (index >= 0 && newItem.key[0] < parent.key[index]) {
-            swap(parent.child,index,index+1);
+    private void parentInsert(TwoThreeNode changingParent, TwoThreeNode newChild) {
+        if (changingParent.numIndexValues <= 2) {//if no split is required
+            addChild(changingParent, newChild);
+        } else {//split is needed
+            TwoThreeNode[] overloadedChildren = new TwoThreeNode[changingParent.child.length + 1];//to fit our extra child
+            final int SECOND_LARGEST = overloadedChildren.length - 2;
+            final int LARGEST = overloadedChildren.length - 1;
+            for (int i = 0; i < changingParent.child.length; i++) {
+                overloadedChildren[i] = changingParent.child[i];
+            }
+            addChild(overloadedChildren, newChild);
+            TwoThreeNode parentSplit = new TwoThreeNode(overloadedChildren[LARGEST].key[0], changingParent.parent,
+                    overloadedChildren[SECOND_LARGEST],
+                    overloadedChildren[LARGEST]);
+
+            overloadedChildren[SECOND_LARGEST].parent = parentSplit;
+            overloadedChildren[LARGEST].parent = parentSplit;
+
+            parentInsert(changingParent.parent, parentSplit);
+        }
+    }
+
+    /*Triple overloaded method addChild*/
+    private void addChild(TwoThreeNode[] children, TwoThreeNode newChild) {
+        int index = children.length - 1;
+        while (index >= 0 && newChild.key[0] < children[index].key[0]) {
+            swap(children, index, index + 1);
             index--;
         }
-        matchingPosition.parent.child[index + 1]=newItem;
-        matchingPosition.parent.numIndexValues++;
+        children[index + 1] = newChild;
     }
 
-    public void pushToParent(TwoThreeNode parent) {
-        if(parent.numIndexValues<3) {//overfull parent
-            TwoThreeNode grandParent = parent.parent;
-            swap(grandParent.key,grandParent.numIndexValues-1,grandParent.numIndexValues);
-            grandParent.key[grandParent.numIndexValues-1]=parent.key[parent.numIndexValues-1];
+    private void addChild(TwoThreeNode parent, int newKey) {
+        int index = parent.numIndexValues - 1;
+        while (index >= 0 && newKey < parent.key[index]) {
+            swap(parent.child, index, index + 1);
+            index--;
         }
+        parent.child[index + 1] = new TwoThreeNode(newKey, parent);
+    }
+
+    private void addChild(TwoThreeNode parent, TwoThreeNode newChild) {
+        int index = parent.numIndexValues - 1;
+        while (index >= 0 && newChild.key[0] < parent.key[index]) {
+            swap(parent.child, index, index + 1);
+            index--;
+        }
+        parent.child[index + 1] = newChild;
+    }
+    /*a simple swapping method for TwoThreeNode arrays*/
+    private void swap(TwoThreeNode[] a, int pos1, int pos2) {
+        TwoThreeNode temp = a[pos1];
+        a[pos1] = a[pos2];
+        a[pos2] = temp;
     }
 
     /************************************************************

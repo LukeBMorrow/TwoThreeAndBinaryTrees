@@ -21,8 +21,8 @@
       <file leaf-file-name="A5MorrowLuke.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="626" column="94" lean-forward="true" selection-start-line="626" selection-start-column="94" selection-end-line="626" selection-end-column="94" />
+            <state relative-caret-position="1275">
+              <caret line="643" column="54" lean-forward="false" selection-start-line="643" selection-start-column="54" selection-end-line="643" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#main#0;class#A5MorrowLuke#0" expanded="false" />
@@ -30,7 +30,6 @@
                 <element signature="method#processSequences#0;class#A5MorrowLuke#0" expanded="false" />
                 <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
                 <element signature="method#test23TreeOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
-                <element signature="class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -43,6 +42,8 @@
                 <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+                <element signature="e#22935#22936#0" expanded="true" />
+                <element signature="e#23001#23002#0" expanded="true" />
                 <element signature="docComment;method#insert#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
@@ -99,9 +100,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,7 +120,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543364519343</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="reworked the code for 2-3 tree insert and added some helper methods">
+      <created>1543515638047</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543515638047</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -271,7 +279,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -293,7 +301,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some more flesh to 2-3 tree insert." />
     <MESSAGE value="added all of the BST methods and fixed 2-3trees printTree." />
-    <option name="LAST_COMMIT_MESSAGE" value="added all of the BST methods and fixed 2-3trees printTree." />
+    <MESSAGE value="reworked the code for 2-3 tree insert and added some helper methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworked the code for 2-3 tree insert and added some helper methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -311,7 +320,6 @@
             <element signature="method#processSequences#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#test23TreeOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
-            <element signature="class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -324,6 +332,8 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="e#22935#22936#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
             <element signature="docComment;method#insert#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
@@ -352,7 +362,6 @@
             <element signature="method#processSequences#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#test23TreeOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
-            <element signature="class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -365,6 +374,8 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="e#22935#22936#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
             <element signature="docComment;method#insert#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
@@ -393,7 +404,6 @@
             <element signature="method#processSequences#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#test23TreeOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
-            <element signature="class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -406,6 +416,8 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="e#22935#22936#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
             <element signature="docComment;method#insert#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
@@ -434,7 +446,6 @@
             <element signature="method#processSequences#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#test23TreeOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
-            <element signature="class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -447,6 +458,8 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="e#22935#22936#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
             <element signature="docComment;method#insert#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
@@ -466,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="626" column="94" lean-forward="true" selection-start-line="626" selection-start-column="94" selection-end-line="626" selection-end-column="94" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#main#0;class#A5MorrowLuke#0" expanded="false" />
@@ -475,7 +488,6 @@
             <element signature="method#processSequences#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
             <element signature="method#test23TreeOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
-            <element signature="class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -488,6 +500,50 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="e#22935#22936#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
+            <element signature="docComment;method#insert#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;class#BST#0" expanded="false" />
+            <element signature="class#BST#0" expanded="false" />
+            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="643" column="54" lean-forward="false" selection-start-line="643" selection-start-column="54" selection-end-line="643" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#A5MorrowLuke#0" expanded="false" />
+            <element signature="method#getAndProcessFile#0;class#A5MorrowLuke#0" expanded="false" />
+            <element signature="method#processSequences#0;class#A5MorrowLuke#0" expanded="false" />
+            <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
+            <element signature="method#test23TreeOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
+            <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#getMinDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="e#22935#22936#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
             <element signature="docComment;method#insert#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
