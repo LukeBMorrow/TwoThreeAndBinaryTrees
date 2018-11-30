@@ -556,7 +556,6 @@ class TwoThreeTree {
             }
         }
         return curr;
-
     } // end searchToLeaf
 
     /************************************************************
@@ -585,10 +584,19 @@ class TwoThreeTree {
      **************************************************************/
     public void insert(int newKey) {
         TwoThreeNode curr = searchToLeaf(newKey);
-        if (curr.parent.numIndexValues <= 2) {//if no split is required
-            addChild(curr.parent, newKey);
-        } else {//split is needed
-            parentInsert(curr.parent, new TwoThreeNode(newKey, curr.parent));
+        if (root != null) {
+            if (curr == root) {
+                TwoThreeNode newParent = new TwoThreeNode(newKey,null);
+                root.parent = newParent;
+            } else {
+                if (curr.parent.numIndexValues <= 2) {//if no split is required
+                    addChild(curr.parent, newKey);
+                } else {//split is needed
+                    parentInsert(curr.parent, new TwoThreeNode(newKey, curr.parent));
+                }
+            }
+        } else {
+            root = new TwoThreeNode(newKey, null);
         }
     }
 
@@ -631,6 +639,8 @@ class TwoThreeTree {
             index--;
         }
         parent.child[index + 1] = new TwoThreeNode(newKey, parent);
+        parent.numIndexValues++;
+        sortKey(parent);
     }
 
     private void addChild(TwoThreeNode parent, TwoThreeNode newChild) {
@@ -639,8 +649,21 @@ class TwoThreeTree {
             swap(parent.child, index, index + 1);
             index--;
         }
+        newChild.parent = parent;
         parent.child[index + 1] = newChild;
+        parent.numIndexValues++;
+        sortKey(parent);
     }
+
+    private void sortKey(TwoThreeNode interiorNode) {
+        if (interiorNode.numIndexValues == 1) {
+            interiorNode.key[0] = interiorNode.child[interiorNode.numIndexValues].key[0];
+        } else {
+            interiorNode.key[1] = interiorNode.child[interiorNode.numIndexValues].key[0];
+            interiorNode.key[0] = interiorNode.child[interiorNode.numIndexValues - 1].key[0];
+        }
+    }
+
     /*a simple swapping method for TwoThreeNode arrays*/
     private void swap(TwoThreeNode[] a, int pos1, int pos2) {
         TwoThreeNode temp = a[pos1];
@@ -880,10 +903,14 @@ class BST {
 
     public void printTree(BSTNode x) {
         if (numToPrint > 0) {
-            printTree(x.left);
+            if (x.left != null) {
+                printTree(x.left);
+            }
             System.out.println(x.item + " ");
             numToPrint--;
-            printTree(x.right);
+            if (x.right != null) {
+                printTree(x.right);
+            }
         }
     }
 
