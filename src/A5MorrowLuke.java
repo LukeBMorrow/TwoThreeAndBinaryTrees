@@ -653,8 +653,18 @@ class TwoThreeTree {
             sortTTNArray(chParent.child);
             chParent.key[1] = nwIndex;//add the new key as an index
             chParent.sortIndecies();
-        }else{//
-
+        }else{//split the parent
+            TwoThreeNode[] overfillChildren = new TwoThreeNode[chParent.child.length+1];//+1 to make room for nwChild
+            int[] overfillIndices = new int[chParent.key.length+1];//+1 to make room for new indices
+            for (int i=0; i<chParent.child.length; i++){
+                overfillChildren[i] = chParent.child[i];
+            }
+            overfillChildren[chParent.child.length]=nwChild;
+            sortTTNArray(overfillChildren);
+            for (int i=1; i<chParent.child.length; i++){
+                overfillIndices[i-1]=overfillChildren[i].key[0];
+            }
+            split(chParent,overfillChildren,overfillIndices);
         }
     }
 
