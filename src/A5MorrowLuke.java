@@ -529,7 +529,7 @@ class TwoThreeTree {
      **************************************************************/
 
     private TwoThreeNode root;
-    public int numToPrint = 20;// the number of prints that are allowed in a 2-3 tree
+
 
     /**************************************************************
      * Constructor
@@ -571,91 +571,90 @@ class TwoThreeTree {
     } // end search
 
 
-    /************************************************************
-     * insert
-     *
-     *    Insert new key newKey into the tree.
-     *     - First, search for newKey.
-     *     - We end up at a leaf.
-     *     - If the leaf contains newKey, simply return (no duplicates!)
-     *     - Otherwise, handle the insertion (including any splitting and
-     *       pushing up required).
-     *
-     **************************************************************/
+    /*
+    insert****
+
+    add node(parent, child)
+        takes a node and adds it to the tree, splits if it needs to
+    split(parent, child)
+        when we split we will add the split parent to the its old parent,
+         from that we may loop if the parent needs to split too
+         if no recursive split, send the second largest item is an index
+     */
     public void insert(int newKey) {
         if (root == null) {
             root = new TwoThreeNode(newKey, null);
         } else {
-            TwoThreeNode destination = searchToLeaf(newKey);//closest item to ours
-            if (destination.key[0] != newKey) {//preform insert
-                TwoThreeNode newNode = new TwoThreeNode(newKey, destination.parent);//now we have a node pointing to the parent
-                if (destination == root) {
-                    if (newNode.key[0] > destination.key[0]) {
-                        root = new TwoThreeNode(newNode.key[0], destination.parent, destination, newNode);
-                        newNode.parent = root;
-                        destination.parent = root;
-                    } else {
-                        root = new TwoThreeNode(destination.key[0], destination.parent, newNode, destination);
-                        newNode.parent = root;
-                        destination.parent = root;
-                    }
-                } else {
-                    if (destination.parent.numIndexValues < 2) {
-                        int index = destination.parent.numIndexValues - 1;
-                        while (index >= 0 && newKey < destination.parent.key[index]) {
-                            swap(destination.parent.child, index, index + 1);
-                            index--;
-                        }
-                        destination.parent.child[index + 1] = newNode;
-                        destination.parent.numIndexValues++;//move up numIndexValues to 2
-                        destination.parent.key[0] = destination.parent.child[1].key[0];
-                        destination.parent.key[1] = destination.parent.child[2].key[0];
-                    } else {
-                        //split
-                    }
-
-                }
+            TwoThreeNode destination = searchToLeaf(newKey);
+            if (destination.key[0] != newKey) {
+                TwoThreeNode newNode = new TwoThreeNode(newKey, destination.parent);
+                addChild(newNode.parent, newNode,destination.key[0]<newKey);
             }
-
         }
+    }
+
+    private void addChild(TwoThreeNode chParent, TwoThreeNode nwChild, boolean rightOfDest){
+        if(chParent.key.length!=chParent.numIndexValues){//if parent has room
+            chParent.child[2] = nwChild;
+            sortTTNArray(chParent.child);
+            if(rightOfDest){
+                chParent.key[1] = nwChild.key[0];//add the new key as an index
+                chParent.sortIndecies();
+            }else{
+                chParent.key[1] = chParent.child[1].key[0];//add the middle most value to the parent
+                chParent.sortIndecies();
+            }
+        }else{//parent is full
+            TwoThreeNode[] overfillChildren = new TwoThreeNode[chParent.child.length+1];//+1 to make room for nwChild
+            int[] overfillIndices = new int[chParent.key.length+1];//+1 to make room for new indices
+            for (int i=0; i<chParent.child.length; i++){
+                overfillChildren[i] = chParent.child[i];
+            }
+            overfillChildren[chParent.child.length]=nwChild;
+            sortTTNArray(overfillChildren);
+            for (int i=1; i<chParent.child.length; i++){
+                overfillIndices[i-1]=overfillChildren[i].key[0];
+            }
+            split(chParent,overfillChildren,overfillIndices);
+        }
+    }
+
+    private void sortTTNArray(TwoThreeNode[] target){
 
     }
 
-    private void split(TwoThreeNode splittingParent, TwoThreeNode newAddition) {
-        //NEEDS TO PLAY WITH ROOT
+    private void split(TwoThreeNode chParent, TwoThreeNode[] overfillChildren, int[] overfillIndices){
+        TwoThreeNode largestChild = overfillChildren[3];
+        TwoThreeNode secondLargestChild = overfillChildren[2];
+        TwoThreeNode thirdLargestChild = overfillChildren[1];
+        TwoThreeNode forthLargestChild = overfillChildren[0];
+        int smallIndex = overfillIndices[0];
+        int middleIndex = overfillIndices[1];
+        int largeIndex = overfillIndices[2];
 
-            TwoThreeNode[] overfullChildren = new TwoThreeNode[splittingParent.child.length + 1];//add 1 to allow for overfull children
+        /*a block to make a new parent and properly assign the children to it.*/
+        TwoThreeNode nwParent = new TwoThreeNode(largeIndex,chParent.parent,secondLargestChild,largestChild);
+        secondLargestChild.parent = nwParent;
+        largestChild.parent = nwParent;
 
-            for (int i = 0; i < splittingParent.child.length; i++) {
-                overfullChildren[i] = splittingParent.child[i];
-            }
-            int index = splittingParent.numIndexValues - 1;
-            while (index >= 0 && newAddition.key[0] < splittingParent.child[index].key[0]) {
-                swap(splittingParent.child, index, index + 1);
-                index--;
-            }
-            overfullChildren[index + 1] = newAddition;
-            splittingParent.child[0] = overfullChildren[0];
-            splittingParent.child[1] = overfullChildren[1];
-            splittingParent.key[0] = overfullChildren[1].key[0];
-            TwoThreeNode newParent = new TwoThreeNode(overfullChildren[3].key[0], splittingParent.parent, overfullChildren[2], overfullChildren[3]);
-            addNewNode(splittingParent.parent, newParent);
+        /*a block to modify chParent to fit our split.*/
+        chParent.key = new int[chParent.key.length];
+        chParent.key[0]=smallIndex;
+        chParent.child = new TwoThreeNode[chParent.child.length];
+        chParent.child[0] = forthLargestChild;
+        chParent.child[1] = thirdLargestChild;
 
+        addParent(chParent.parent,nwParent,middleIndex);
     }
 
-    private void addNewNode(TwoThreeNode newParent, TwoThreeNode newAddition) {
-        if(newParent.numIndexValues<2) {
-            int index = newParent.numIndexValues - 1;
-            while (index >= 0 && newAddition.key[0] < newParent.key[index]) {
-                swap(newParent.child, index, index + 1);
-                index--;
-            }
-            newParent.parent.child[index + 1] = newAddition;
-            newParent.parent.numIndexValues++;//move up numIndexValues to 2
-            newParent.parent.key[0] = newParent.parent.child[1].key[0];
-            newParent.parent.key[1] = newParent.parent.child[2].key[0];
-        }else{
-            split(newParent,newAddition);
+    private void addParent(TwoThreeNode chParent, TwoThreeNode nwChild, int nwIndex){
+        if(chParent.numIndexValues!=chParent.key.length){//if parent isn't full
+            chParent.child[2] = nwChild;
+            sortTTNArray(chParent.child);
+            chParent.key[1] = nwIndex;//add the new key as an index
+            chParent.sortIndecies();
+        }else{//
+
         }
     }
 
@@ -677,27 +676,25 @@ class TwoThreeTree {
      *
      **************************************************************/
     public void printTree() {
+        final int NUM_TO_PRINT = 20;
         if (root != null) {
-            printTree(root);
+            printTree(root, NUM_TO_PRINT);
         } else {
             System.out.println("Tree is empty");
         }
-        if (numToPrint <= 0) {
-            System.out.print("...\n");
-        }
-        numToPrint = 20;// reset the print counter
     } // end printTree
 
-    public void printTree(TwoThreeNode x) {
+    public void printTree(TwoThreeNode x, int numToPrint) {
         if (numToPrint > 0) {
             if (x.isInteriorNode()) {//x is an interior node
                 for (TwoThreeNode i : x.child) {
-                    printTree(i);
+                    printTree(i, numToPrint - 1);
                 }
             } else {//x is a leaf
                 System.out.println(x.key[0] + " ");
-                numToPrint--;
             }
+        } else {
+            System.out.print("...\n");
         }
     }
 
@@ -807,7 +804,7 @@ class BST {
      **************************************************************/
 
     private BSTNode root;
-    private int numToPrint = 20;
+
 
     /************************************************************
      *  Constructor
@@ -885,27 +882,26 @@ class BST {
      *
      **************************************************************/
     public void printTree() {
+        final int NUM_TO_PRINT = 20;
         if (root != null) {
-            printTree(root);
+            printTree(root, NUM_TO_PRINT);
         } else {
             System.out.println("Tree is empty");
         }
-        if (numToPrint <= 0) {
-            System.out.println("...\n");
-        }
-        numToPrint = 20;// reset the print counter
     } // end printTree
 
-    public void printTree(BSTNode x) {
+    public void printTree(BSTNode x, int numToPrint) {
         if (numToPrint > 0) {
             if (x.left != null) {
-                printTree(x.left);
+                printTree(x.left, numToPrint - 1);
             }
             System.out.println(x.item + " ");
             numToPrint--;
             if (x.right != null) {
-                printTree(x.right);
+                printTree(x.right, numToPrint - 1);
             }
+        } else {
+            System.out.println("...\n");
         }
     }
 
