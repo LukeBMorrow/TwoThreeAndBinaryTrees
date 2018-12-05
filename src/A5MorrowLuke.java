@@ -615,7 +615,8 @@ class TwoThreeTree {
             if (chParent.key.length != chParent.numIndexValues) {//if parent has room
                 chParent.child[2] = nwChild;
                 chParent.numIndexValues++;
-                sortTTNArray(chParent.child, chParent.numIndexValues + 1);
+                nwChild.parent=chParent;
+                sortTTNArray(chParent.child);
                 if (rightOfDest) {
                     chParent.key[1] = nwChild.key[0];//add the new key as an index
                     chParent.sortIndices();
@@ -630,8 +631,8 @@ class TwoThreeTree {
                     overfillChildren[i] = chParent.child[i];
                 }
                 overfillChildren[chParent.child.length] = nwChild;
-                sortTTNArray(overfillChildren, overfillChildren.length);
-                for (int i = 1; i < chParent.child.length; i++) {
+                sortTTNArray(overfillChildren);
+                for (int i = 1; i < overfillChildren.length; i++) {
                     overfillIndices[i - 1] = overfillChildren[i].key[0];
                 }
                 sortIndices(overfillIndices);
@@ -651,11 +652,11 @@ class TwoThreeTree {
         }
     }
 
-    private void sortTTNArray(TwoThreeNode[] target, int length) {
-        for (int i = 1; i < length; i++) {
+    private void sortTTNArray(TwoThreeNode[] target) {
+        for (int i = 1; i < target.length; i++) {
             TwoThreeNode temp = target[i];
             int j = i;
-            while (temp.key[0] < target[j].key[0] && j > 0) {
+            while (temp.key[0] <= target[j].key[0] && j > 0) {
                 target[j] = target[j - 1];
                 j--;
             }
@@ -666,12 +667,12 @@ class TwoThreeTree {
     public void sortIndices(int[] target) {
         for (int i = 1; i < target.length; i++) {
             int temp = target[i];
-            int j = i - 1;
+            int j = i-1;
             while (j >= 0 && temp < target[j]) {
-                target[j + 1] = target[j];
+                target[j+1] = target[j];
                 j--;
             }
-            target[j + 1] = temp;
+            target[j+1] = temp;
         }
     }
 
@@ -703,7 +704,6 @@ class TwoThreeTree {
             root = new TwoThreeNode(middleIndex, null, chParent, nwParent);
             root.child[0].parent = root;
             root.child[1].parent = root;
-            sortTTNArray(root.child, root.numIndexValues + 1);
         }
     }
 
@@ -712,7 +712,7 @@ class TwoThreeTree {
         if (chParent.numIndexValues != chParent.key.length) {//if parent isn't full
             chParent.child[2] = nwChild;
             chParent.numIndexValues++;
-            sortTTNArray(chParent.child, chParent.numIndexValues + 1);
+            sortTTNArray(chParent.child);
             chParent.key[1] = nwIndex;//add the new key as an index
             chParent.sortIndices();
             nwChild.parent = chParent;
@@ -723,20 +723,16 @@ class TwoThreeTree {
                 overfillChildren[i] = chParent.child[i];
             }
             overfillChildren[chParent.child.length] = nwChild;
-            sortTTNArray(overfillChildren, overfillChildren.length);
-            for (int i = 1; i < chParent.child.length; i++) {
-                overfillIndices[i - 1] = overfillChildren[i].key[0];
+            sortTTNArray(overfillChildren);
+            for (int i = 0; i < chParent.numIndexValues; i++) {
+                overfillIndices[i] = chParent.key[i];
             }
+            overfillIndices[overfillIndices.length-1] = nwIndex;
+            sortIndices(overfillIndices);
+
             split(chParent, overfillChildren, overfillIndices);
         }
 
-    }
-
-    /*a simple swapping method for TwoThreeNode arrays*/
-    private void swap(TwoThreeNode[] a, int pos1, int pos2) {
-        TwoThreeNode temp = a[pos1];
-        a[pos1] = a[pos2];
-        a[pos2] = temp;
     }
 
     /************************************************************
@@ -965,16 +961,16 @@ class BST {
 
     public void printTree(BSTNode x) {
 
-            if (x.left != null) {
-                printTree(x.left);
-            }
-            if (numToPrint > 0) {
+        if (x.left != null) {
+            printTree(x.left);
+        }
+        if (numToPrint > 0) {
             System.out.println(x.item + " ");
-            }
-            numToPrint--;
-            if (x.right != null) {
-                printTree(x.right);
-            }
+        }
+        numToPrint--;
+        if (x.right != null) {
+            printTree(x.right);
+        }
 
     }
 

@@ -4,7 +4,6 @@
     <list default="true" id="478b034f-773f-43a9-a376-15b06ddb3b3f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment5/BST$BSTNode.class" afterPath="$PROJECT_DIR$/out/production/Assignment5/BST$BSTNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment5/BST.class" afterPath="$PROJECT_DIR$/out/production/Assignment5/BST.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment5/TwoThreeTree$TwoThreeNode.class" afterPath="$PROJECT_DIR$/out/production/Assignment5/TwoThreeTree$TwoThreeNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment5/TwoThreeTree.class" afterPath="$PROJECT_DIR$/out/production/Assignment5/TwoThreeTree.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A5MorrowLuke.java" afterPath="$PROJECT_DIR$/src/A5MorrowLuke.java" />
@@ -20,13 +19,16 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/A5MorrowLuke$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1543967542390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="A5MorrowLuke.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="972" column="13" lean-forward="false" selection-start-line="972" selection-start-column="13" selection-end-line="972" selection-end-column="13" />
+            <state relative-caret-position="-17">
+              <caret line="675" column="9" lean-forward="false" selection-start-line="675" selection-start-column="9" selection-end-line="675" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
@@ -44,13 +46,11 @@
                 <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+                <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+                <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+                <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;class#BST#0" expanded="false" />
                 <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
                 <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -70,6 +70,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>numIndexValues</find>
+      <find>sortTTN</find>
+      <find>sortTTNArray</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -79,6 +81,9 @@
         <entry key="$PROJECT_DIR$" value="tentow1" />
       </map>
     </option>
+    <push-targets>
+      <push-target-info target-remote="origin" target-branch="master" repo="$PROJECT_DIR$" source="tentow2" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -141,7 +146,7 @@
     <configuration name="Unnamed" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="A5MorrowLuke" />
-      <option name="VM_PARAMETERS" value="" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -301,11 +306,19 @@
       <option name="project" value="LOCAL" />
       <updated>1543803956767</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="BST works perfectly and 2-3 runs, but 2-3 is not ordering children properly.">
+      <created>1543813447336</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1543813447336</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -316,7 +329,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3669141" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28419936" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -326,7 +339,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33510074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14103924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -376,21 +389,21 @@
     <MESSAGE value="reworked insert, I'm more confident this time, added split, addChild, addParent, and added some methods that are empty atm." />
     <MESSAGE value="Little change to addParent." />
     <MESSAGE value="added sorting methods and made the code runnable, granted it does throw an exception." />
-    <option name="LAST_COMMIT_MESSAGE" value="added sorting methods and made the code runnable, granted it does throw an exception." />
+    <MESSAGE value="BST works perfectly and 2-3 runs, but 2-3 is not ordering children properly." />
+    <option name="LAST_COMMIT_MESSAGE" value="BST works perfectly and 2-3 runs, but 2-3 is not ordering children properly." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/A5MorrowLuke.java</url>
-          <line>673</line>
-          <properties />
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="48" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="overfillChildren[chParent.child.length]" language="JAVA" />
+        <watch expression="destination" />
+        <watch expression="target[2]" />
+        <watch expression="curr.child" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
@@ -414,13 +427,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -455,13 +466,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -496,13 +505,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -537,13 +544,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -578,13 +583,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -619,13 +622,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -660,13 +661,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -701,13 +700,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -742,13 +739,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -783,13 +778,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -824,13 +817,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -865,13 +856,89 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;class#BST#0" expanded="false" />
+            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
+            <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12868#12869#0" expanded="true" />
+            <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#getMinDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;class#BST#0" expanded="false" />
+            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
+            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
+            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
+            <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="e#12822#12823#0" expanded="true" />
+            <element signature="e#12868#12869#0" expanded="true" />
+            <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#getMinDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
@@ -889,18 +956,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/StringBuilder.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/NullPointerException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="207" column="0" lean-forward="false" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
-          <folding>
-            <element signature="e#2871#2872#0" expanded="false" />
-            <element signature="e#2896#2897#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="313">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -912,20 +974,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/NullPointerException.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/StringBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="193">
+          <caret line="406" column="0" lean-forward="false" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
           <folding>
-            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#2871#2872#0" expanded="false" />
+            <element signature="e#2896#2897#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="804" column="0" lean-forward="false" selection-start-line="804" selection-start-column="0" selection-end-line="804" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ASSIGNMENT 1/Assignment1/src/A1MorrowLuke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14760#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="972" column="13" lean-forward="false" selection-start-line="972" selection-start-column="13" selection-end-line="972" selection-end-column="13" />
+        <state relative-caret-position="-17">
+          <caret line="675" column="9" lean-forward="false" selection-start-line="675" selection-start-column="9" selection-end-line="675" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
@@ -943,13 +1024,11 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#insert#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#addChild#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortTTNArray#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#sortIndices#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#split#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;class#BST#0" expanded="false" />
             <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
             <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
