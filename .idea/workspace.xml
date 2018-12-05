@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="478b034f-773f-43a9-a376-15b06ddb3b3f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment5/BST$BSTNode.class" afterPath="$PROJECT_DIR$/out/production/Assignment5/BST$BSTNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment5/BST.class" afterPath="$PROJECT_DIR$/out/production/Assignment5/BST.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment5/TwoThreeTree.class" afterPath="$PROJECT_DIR$/out/production/Assignment5/TwoThreeTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/A5MorrowLuke.java" afterPath="$PROJECT_DIR$/src/A5MorrowLuke.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,8 +23,8 @@
       <file leaf-file-name="A5MorrowLuke.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="675" column="9" lean-forward="false" selection-start-line="675" selection-start-column="9" selection-end-line="675" selection-end-column="9" />
+            <state relative-caret-position="340">
+              <caret line="658" column="62" lean-forward="true" selection-start-line="658" selection-start-column="62" selection-end-line="658" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
@@ -36,8 +32,6 @@
                 <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="e#12822#12823#0" expanded="true" />
-                <element signature="e#12868#12869#0" expanded="true" />
                 <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -46,20 +40,6 @@
                 <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
                 <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-                <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-                <element signature="docComment;class#BST#0" expanded="false" />
-                <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-                <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-                <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-                <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-                <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-                <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-                <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-                <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -318,7 +298,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -328,8 +307,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37751856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28419936" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -338,8 +317,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14103924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -417,8 +396,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -427,20 +404,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -456,8 +419,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -466,20 +427,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -495,8 +442,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -505,20 +450,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -534,8 +465,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -544,20 +473,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -573,8 +488,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -583,20 +496,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -612,8 +511,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -622,20 +519,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,8 +534,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -661,20 +542,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -690,8 +557,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -700,20 +565,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -729,8 +580,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -739,20 +588,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -768,8 +603,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -778,20 +611,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -807,8 +626,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -817,20 +634,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -846,8 +649,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -856,20 +657,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -885,8 +672,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -895,20 +680,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -924,8 +695,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -934,20 +703,29 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
+            <element signature="docComment;method#TwoThreeNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#getMinDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
+            <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -970,7 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,10 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="406" column="0" lean-forward="false" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
-          <folding>
-            <element signature="e#2871#2872#0" expanded="false" />
-            <element signature="e#2896#2897#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -997,16 +770,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-561">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14760#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/A5MorrowLuke.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="675" column="9" lean-forward="false" selection-start-line="675" selection-start-column="9" selection-end-line="675" selection-end-column="9" />
+        <state relative-caret-position="340">
+          <caret line="658" column="62" lean-forward="true" selection-start-line="658" selection-start-column="62" selection-end-line="658" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testBSTOnSequence#0;class#A5MorrowLuke#0" expanded="false" />
@@ -1014,8 +784,6 @@
             <element signature="docComment;method#TwoThreeNode#1;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isLeaf#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#isInteriorNode#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="e#12822#12823#0" expanded="true" />
-            <element signature="e#12868#12869#0" expanded="true" />
             <element signature="docComment;method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="method#parentChildPointersOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#valuesOK#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
@@ -1024,20 +792,6 @@
             <element signature="docComment;method#getMaxDataValue#0;class#TwoThreeNode#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#searchToLeaf#0;class#TwoThreeTree#0" expanded="false" />
             <element signature="docComment;method#search#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#printTree#1;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="method#treeOK#0;class#TwoThreeTree#0" expanded="false" />
-            <element signature="docComment;class#BST#0" expanded="false" />
-            <element signature="docComment;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BSTNode#0;class#BSTNode#0;class#BST#0" expanded="false" />
-            <element signature="docComment;field#root#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#BST#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#insert#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#search#0;class#BST#0" expanded="false" />
-            <element signature="docComment;method#printTree#0;class#BST#0" expanded="false" />
           </folding>
         </state>
       </provider>

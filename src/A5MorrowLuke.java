@@ -655,12 +655,12 @@ class TwoThreeTree {
     private void sortTTNArray(TwoThreeNode[] target) {
         for (int i = 1; i < target.length; i++) {
             TwoThreeNode temp = target[i];
-            int j = i;
-            while (temp.key[0] <= target[j].key[0] && j > 0) {
-                target[j] = target[j - 1];
+            int j = i-1;
+            while (j >= 0&& temp.key[0] <= target[j].key[0]) {
+                target[j+1] = target[j];
                 j--;
             }
-            target[j] = temp;
+            target[j+1] = temp;
         }
     }
 
