@@ -593,51 +593,92 @@ class TwoThreeTree {
             TwoThreeNode destination = searchToLeaf(newKey);
             if (destination.key[0] != newKey) {
                 TwoThreeNode newNode = new TwoThreeNode(newKey, destination.parent);
-                addChild(newNode.parent, newNode, destination.key[0] < newKey);
+                if (destination.key[0] < newKey) {
+                    addChild(newNode.parent, newNode, newKey);
+                } else {
+                    if (destination.parent != null) {
+                        addChild(newNode.parent, newNode, destination.parent.child[0].key[0]);
+                    } else {
+                        addChild(newNode.parent, newNode, destination.key[0]);
+                    }
+                }
             }
         }
     }
 
     /* Adds a new leaf to the 2-3 tree, if the parent is full it splits the parent using split().*/
-    private void addChild(TwoThreeNode chParent, TwoThreeNode nwChild, boolean rightOfDest) {
+    private void addChild(TwoThreeNode chParent, TwoThreeNode nwChild, int nwIndex) {
         if (chParent != null) {
             if (chParent.key.length != chParent.numIndexValues) {//if parent has room
                 chParent.child[2] = nwChild;
                 chParent.numIndexValues++;
-                nwChild.parent = chParent;
                 sortTTNArray(chParent.child);
-                if (rightOfDest) {
-                    chParent.key[1] = nwChild.key[0];//add the new key as an index
-                    sortIndices(chParent.key);
-                } else {
-                    chParent.key[1] = chParent.child[1].key[0];//add the middle most value to the parent
-                    sortIndices(chParent.key);
-                }
+                chParent.key[1] = nwIndex;//add the new key as an index
+                sortIndices(chParent.key);
+                nwChild.parent = chParent;
             } else {//parent is full
                 TwoThreeNode[] overfillChildren = new TwoThreeNode[chParent.child.length + 1];//+1 to make room for nwChild
                 int[] overfillIndices = new int[chParent.key.length + 1];//+1 to make room for new indices
-                for (int i = 0; i < chParent.child.length; i++) {
-                    overfillChildren[i] = chParent.child[i];
-                }
-                overfillChildren[chParent.child.length] = nwChild;
-                sortTTNArray(overfillChildren);
-                for (int i = 1; i < overfillChildren.length; i++) {
-                    overfillIndices[i - 1] = overfillChildren[i].key[0];
-                }
-                sortIndices(overfillIndices);
+                splitPrep(overfillChildren, chParent, nwChild, overfillIndices, nwIndex);
                 split(chParent, overfillChildren, overfillIndices);
             }
         } else {//make a new root
-            if (rightOfDest) {
-                root = new TwoThreeNode(nwChild.key[0], null, root, nwChild);
-                root.child[0].parent = root;
-                root.child[1].parent = root;
-            } else {
-                root = new TwoThreeNode(root.key[0], null, nwChild, root);
-                root.child[0].parent = root;
-                root.child[1].parent = root;
+            addNewRoot(nwChild, nwIndex);
+        }
+    }
 
-            }
+    /* adds a new root to the tree based on the given node and index*/
+    private void addNewRoot(TwoThreeNode nwChild, int nwIndex) {
+        if (nwIndex <= nwChild.key[0]) {
+            root = new TwoThreeNode(nwIndex, null, root, nwChild);
+        } else {
+            root = new TwoThreeNode(nwIndex, null, nwChild, root);
+        }
+        root.child[0].parent = root;
+        root.child[1].parent = root;
+    }
+
+    /* prepares overfillChildren and overfillIndices for use in split*/
+    private void splitPrep(TwoThreeNode[] overfillChildren, TwoThreeNode chParent, TwoThreeNode nwChild, int[] overfillIndices, int nwIndex) {
+        for (int i = 0; i < chParent.child.length; i++) {
+            overfillChildren[i] = chParent.child[i];
+        }
+        overfillChildren[chParent.child.length] = nwChild;
+        sortTTNArray(overfillChildren);
+        for (int i = 0; i < chParent.numIndexValues; i++) {
+            overfillIndices[i] = chParent.key[i];
+        }
+        overfillIndices[overfillIndices.length - 1] = nwIndex;
+        sortIndices(overfillIndices);
+    }
+
+    /* splits the parent and adds the new parent to the tree using addChild(). */
+    private void split(TwoThreeNode chParent, TwoThreeNode[] overfillChildren, int[] overfillIndices) {
+        TwoThreeNode largestChild = overfillChildren[3];
+        TwoThreeNode secondLargestChild = overfillChildren[2];
+        TwoThreeNode thirdLargestChild = overfillChildren[1];
+        TwoThreeNode forthLargestChild = overfillChildren[0];
+        int smallIndex = overfillIndices[0];
+        int middleIndex = overfillIndices[1];
+        int largeIndex = overfillIndices[2];
+
+        /*a block to make a new parent and properly assign the children to it.*/
+        TwoThreeNode nwParent = new TwoThreeNode(largeIndex, chParent.parent, secondLargestChild, largestChild);
+        secondLargestChild.parent = nwParent;
+        largestChild.parent = nwParent;
+
+        /*a block to modify chParent to fit our split.*/
+        chParent.key = new int[chParent.key.length];
+        chParent.key[0] = smallIndex;
+        chParent.numIndexValues = 1;
+        chParent.child = new TwoThreeNode[chParent.child.length];
+        chParent.child[0] = forthLargestChild;
+        chParent.child[1] = thirdLargestChild;
+
+        if (chParent.parent != null) {//if chParent is not the root
+            addChild(chParent.parent, nwParent, middleIndex);
+        } else {//if chParent is the root
+            addNewRoot(nwParent, middleIndex);
         }
     }
 
@@ -665,66 +706,6 @@ class TwoThreeTree {
             }
             target[j + 1] = temp;
         }
-    }
-
-    /* splits the parent and adds the new parent to the tree using addParent(). */
-    private void split(TwoThreeNode chParent, TwoThreeNode[] overfillChildren, int[] overfillIndices) {
-        TwoThreeNode largestChild = overfillChildren[3];
-        TwoThreeNode secondLargestChild = overfillChildren[2];
-        TwoThreeNode thirdLargestChild = overfillChildren[1];
-        TwoThreeNode forthLargestChild = overfillChildren[0];
-        int smallIndex = overfillIndices[0];
-        int middleIndex = overfillIndices[1];
-        int largeIndex = overfillIndices[2];
-
-        /*a block to make a new parent and properly assign the children to it.*/
-        TwoThreeNode nwParent = new TwoThreeNode(largeIndex, chParent.parent, secondLargestChild, largestChild);
-        secondLargestChild.parent = nwParent;
-        largestChild.parent = nwParent;
-
-        /*a block to modify chParent to fit our split.*/
-        chParent.key = new int[chParent.key.length];
-        chParent.key[0] = smallIndex;
-        chParent.numIndexValues = 1;
-        chParent.child = new TwoThreeNode[chParent.child.length];
-        chParent.child[0] = forthLargestChild;
-        chParent.child[1] = thirdLargestChild;
-
-        if (chParent.parent != null) {//if chParent is not the root
-            addParent(chParent.parent, nwParent, middleIndex);
-        } else {//if chParent is the root
-            root = new TwoThreeNode(middleIndex, null, chParent, nwParent);
-            root.child[0].parent = root;
-            root.child[1].parent = root;
-        }
-    }
-
-    /* adds a new child which is an interior node, to the 2-3 tree, if the chParent is full, it
-     * calls split(). */
-    private void addParent(TwoThreeNode chParent, TwoThreeNode nwChild, int nwIndex) {
-        if (chParent.numIndexValues != chParent.key.length) {//if parent isn't full
-            chParent.child[2] = nwChild;
-            chParent.numIndexValues++;
-            sortTTNArray(chParent.child);
-            chParent.key[1] = nwIndex;//add the new key as an index
-            sortIndices(chParent.key);
-            nwChild.parent = chParent;
-        } else {//split the parent
-            TwoThreeNode[] overfillChildren = new TwoThreeNode[chParent.child.length + 1];//+1 to make room for nwChild
-            int[] overfillIndices = new int[chParent.key.length + 1];//+1 to make room for new indices
-            for (int i = 0; i < chParent.child.length; i++) {
-                overfillChildren[i] = chParent.child[i];
-            }
-            overfillChildren[chParent.child.length] = nwChild;
-            sortTTNArray(overfillChildren);
-            for (int i = 0; i < chParent.numIndexValues; i++) {
-                overfillIndices[i] = chParent.key[i];
-            }
-            overfillIndices[overfillIndices.length - 1] = nwIndex;
-            sortIndices(overfillIndices);
-            split(chParent, overfillChildren, overfillIndices);
-        }
-
     }
 
     /************************************************************
