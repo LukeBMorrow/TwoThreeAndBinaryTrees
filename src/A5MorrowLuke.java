@@ -520,18 +520,6 @@ class TwoThreeTree {
             return child[index + 1];
         }
 
-        public void sortIndices() {
-            for (int i = 1; i < numIndexValues; i++) {
-                int temp = key[i];
-                int j = i;
-                while (temp < key[j] && j > 0) {
-                    key[j] = key[j - 1];
-                    j--;
-                }
-                key[j] = temp;
-            }
-        }
-
     } // end class TwoThreeNode
 
     /**************************************************************
@@ -610,19 +598,20 @@ class TwoThreeTree {
         }
     }
 
+    /* Adds a new leaf to the 2-3 tree, if the parent is full it splits the parent using split().*/
     private void addChild(TwoThreeNode chParent, TwoThreeNode nwChild, boolean rightOfDest) {
         if (chParent != null) {
             if (chParent.key.length != chParent.numIndexValues) {//if parent has room
                 chParent.child[2] = nwChild;
                 chParent.numIndexValues++;
-                nwChild.parent=chParent;
+                nwChild.parent = chParent;
                 sortTTNArray(chParent.child);
                 if (rightOfDest) {
                     chParent.key[1] = nwChild.key[0];//add the new key as an index
-                    chParent.sortIndices();
+                    sortIndices(chParent.key);
                 } else {
                     chParent.key[1] = chParent.child[1].key[0];//add the middle most value to the parent
-                    chParent.sortIndices();
+                    sortIndices(chParent.key);
                 }
             } else {//parent is full
                 TwoThreeNode[] overfillChildren = new TwoThreeNode[chParent.child.length + 1];//+1 to make room for nwChild
@@ -652,30 +641,33 @@ class TwoThreeTree {
         }
     }
 
+    /* Sorts an array of 2-3 Nodes using insertion sort */
     private void sortTTNArray(TwoThreeNode[] target) {
         for (int i = 1; i < target.length; i++) {
             TwoThreeNode temp = target[i];
-            int j = i-1;
-            while (j >= 0&& temp.key[0] <= target[j].key[0]) {
-                target[j+1] = target[j];
+            int j = i - 1;
+            while (j >= 0 && temp.key[0] <= target[j].key[0]) {
+                target[j + 1] = target[j];
                 j--;
             }
-            target[j+1] = temp;
+            target[j + 1] = temp;
         }
     }
 
-    public void sortIndices(int[] target) {
+    /* Sorts an array of ints, in this case indices, using insertion sort.*/
+    private void sortIndices(int[] target) {
         for (int i = 1; i < target.length; i++) {
             int temp = target[i];
-            int j = i-1;
+            int j = i - 1;
             while (j >= 0 && temp < target[j]) {
-                target[j+1] = target[j];
+                target[j + 1] = target[j];
                 j--;
             }
-            target[j+1] = temp;
+            target[j + 1] = temp;
         }
     }
 
+    /* splits the parent and adds the new parent to the tree using addParent(). */
     private void split(TwoThreeNode chParent, TwoThreeNode[] overfillChildren, int[] overfillIndices) {
         TwoThreeNode largestChild = overfillChildren[3];
         TwoThreeNode secondLargestChild = overfillChildren[2];
@@ -698,23 +690,24 @@ class TwoThreeTree {
         chParent.child[0] = forthLargestChild;
         chParent.child[1] = thirdLargestChild;
 
-        if (chParent.parent != null) {
+        if (chParent.parent != null) {//if chParent is not the root
             addParent(chParent.parent, nwParent, middleIndex);
-        } else {
+        } else {//if chParent is the root
             root = new TwoThreeNode(middleIndex, null, chParent, nwParent);
             root.child[0].parent = root;
             root.child[1].parent = root;
         }
     }
 
+    /* adds a new child which is an interior node, to the 2-3 tree, if the chParent is full, it
+     * calls split(). */
     private void addParent(TwoThreeNode chParent, TwoThreeNode nwChild, int nwIndex) {
-
         if (chParent.numIndexValues != chParent.key.length) {//if parent isn't full
             chParent.child[2] = nwChild;
             chParent.numIndexValues++;
             sortTTNArray(chParent.child);
             chParent.key[1] = nwIndex;//add the new key as an index
-            chParent.sortIndices();
+            sortIndices(chParent.key);
             nwChild.parent = chParent;
         } else {//split the parent
             TwoThreeNode[] overfillChildren = new TwoThreeNode[chParent.child.length + 1];//+1 to make room for nwChild
@@ -727,9 +720,8 @@ class TwoThreeTree {
             for (int i = 0; i < chParent.numIndexValues; i++) {
                 overfillIndices[i] = chParent.key[i];
             }
-            overfillIndices[overfillIndices.length-1] = nwIndex;
+            overfillIndices[overfillIndices.length - 1] = nwIndex;
             sortIndices(overfillIndices);
-
             split(chParent, overfillChildren, overfillIndices);
         }
 
@@ -754,6 +746,7 @@ class TwoThreeTree {
         }
     } // end printTree
 
+    /* the recursive print method for printTree*/
     public void printTree(TwoThreeNode x) {
         if (numToPrint > 0) {
             if (x.isInteriorNode()) {//x is an interior node
@@ -959,6 +952,7 @@ class BST {
         }
     } // end printTree
 
+    /* the recursive method for printTree*/
     public void printTree(BSTNode x) {
 
         if (x.left != null) {
